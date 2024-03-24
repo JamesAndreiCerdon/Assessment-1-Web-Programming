@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="C:\Users\James\Desktop\webprogramming\chapter 6\style.css">
+    <title>Exercise 6 Petrol Calculator</title>
+</head>
+<body>
+    <div class="calculator">
+    <h1>Petrol Calculator</h1>
+<label> Cost of petrol per liter</label>
+        <input type="number" id="cost" placeholder="Cost per liter (default:1.72)" value="1.72">
+        <br>
+        <label>
+<label>Number of liters purchased</label>
+        </label>
+        <input type="number" id="liters" placeholder="Number of liters" value="0">
+        <br>
+        <button onclick="calculateCost()">Calculate Cost</button>
+        <br><br>
+        <p id="total"></p>
+    </div>
+    <script>
+        function calculateCost() {
+            const cost = parseFloat(document.getElementById("cost").value);
+            const liters = parseFloat(document.getElementById("liters").value);
+            const total = cost * liters;
+
+            document.getElementById("total").innerText = "Total: AED" + total.toFixed(2);
+        }
+    </script>
+</body>
+</html>
